@@ -1,48 +1,66 @@
-```markdown
-# Legacy EGP Application
+# Modernized Application
 
-A legacy Java EE (J2EE) enterprise application built with EJB 3.x, JSP/Servlets, and JPA. This multi-module Maven project represents a typical enterprise government portal (EGP) system from the mid-2000s era.
+This repository contains the modernized version of the legacy application.
 
-## Architecture
+## Generated Files
 
-- **egp-core-ejb**: Core business logic with EJB 3.x stateless session beans, JPA entities, and DAOs
-- **egp-portal-war**: Web presentation layer with JSP pages and servlets
-- **egp-ear**: Enterprise Archive packaging both WAR and EJB JAR modules
+- `pom.xml`
+- `db/schema.sql`
+- `db/seed.sql`
+- `egp-core-ejb/pom.xml`
+- `egp-core-ejb/src/main/java/com/legacy/egp/dao/CaseDAO.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/dao/CustomerDAO.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/dao/NotesDAO.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/ejb/AuditMDB.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/ejb/CaseBean.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/ejb/CaseBeanLocal.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/ejb/CaseBeanRemote.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/ejb/CustomerBean.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/ejb/CustomerBeanLocal.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/ejb/CustomerBeanRemote.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/entity/CaseRecord.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/entity/Customer.java`
+- `egp-core-ejb/src/main/java/com/legacy/egp/entity/Note.java`
+- `egp-core-ejb/src/main/resources/jdbc.properties`
+- `egp-core-ejb/src/main/resources/log4j2.xml`
+- `egp-core-ejb/src/main/resources/META-INF/persistence.xml`
+- `egp-core-ejb/src/main/resources/wsdl/LegacyService.wsdl`
+- `egp-ear/pom.xml`
+- `egp-ear/src/main/application/META-INF/application.xml`
+- `egp-portal-war/pom.xml`
+- `egp-portal-war/src/main/java/com/legacy/egp/web/AuthFilter.java`
+- `egp-portal-war/src/main/java/com/legacy/egp/web/CaseServlet.java`
+- `egp-portal-war/src/main/java/com/legacy/egp/web/LegacySoapClient.java`
+- `egp-portal-war/src/main/java/com/legacy/egp/web/LoginServlet.java`
+- `egp-portal-war/src/main/java/com/legacy/egp/web/ProfileServlet.java`
+- `egp-portal-war/src/main/webapp/caseDetails.jsp`
+- `egp-portal-war/src/main/webapp/cases.jsp`
+- `egp-portal-war/src/main/webapp/home.jsp`
+- `egp-portal-war/src/main/webapp/login.jsp`
+- `egp-portal-war/src/main/webapp/notes.jsp`
+- `egp-portal-war/src/main/webapp/profile.jsp`
+- `egp-portal-war/src/main/webapp/styles.css`
+- `egp-portal-war/src/main/webapp/WEB-INF/jboss-web.xml`
+- `egp-portal-war/src/main/webapp/WEB-INF/web.xml`
+- `egp-portal-war/src/main/webapp/WEB-INF/weblogic.xml`
+- `egp-portal-war/src/main/webapp/admin/audit.jsp`
+- `egp-portal-war/src/main/webapp/admin/users.jsp`
+- `scripts/build.sh`
+- `scripts/deploy.sh`
 
-## Modernization Strategy
+## Overview
 
-To modernize this legacy application, we will:
-1. Migrate from EJB 3.x to Spring Boot for business logic.
-2. Replace JSP/Servlets with a modern web framework (e.g., Thymeleaf or Angular).
-3. Use Spring Data JPA for data access.
-4. Containerize the application using Docker.
-5. Implement continuous integration and continuous deployment (CI/CD) pipelines.
+This code was automatically modernized using AI-powered code modernization based on:
+- Legacy code repository analysis
+- Discovery phase findings
+- Migration plan recommendations
+- Architecture advisory guidelines
 
-## Build and Run
+## Next Steps
 
-To build and run the modernized application, follow these steps:
+1. Review the generated code
+2. Run tests
+3. Deploy to staging environment
+4. Monitor and optimize
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/BirlasoftCogitoai/legacy-codebasev1.git
-    cd legacy-codebasev1
-    ```
-
-2. Build the application using Maven:
-    ```sh
-    mvn clean install
-    ```
-
-3. Run the application:
-    ```sh
-    java -jar target/legacy-egp-app.jar
-    ```
-
-## Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
+Generated on: 2025-10-01 18:02:24
