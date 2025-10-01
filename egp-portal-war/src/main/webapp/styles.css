@@ -1,0 +1,50 @@
+/* Modern EGP Portal Styles - 2023 Design */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 5px 0;
+}
+
+header h1, footer p {
+  margin: 0;
+}
+
+.profile div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.notes ul {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
