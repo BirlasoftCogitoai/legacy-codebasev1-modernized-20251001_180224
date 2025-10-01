@@ -1,0 +1,33 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-web-app
+                  http://xmlns.oracle.com/weblogic/weblogic-web-app/1.4/weblogic-web-app.xsd">
+
+    <!-- WebLogic-specific deployment descriptor -->
+    <context-root>/egp-portal</context-root>
+    
+    <!-- Session timeout configuration -->
+    <session-descriptor>
+        <session-param>
+            <param-name>timeout-secs</param-name>
+            <param-value>1800</param-value>
+        </session-param>
+    </session-descriptor>
+    
+    <!-- Security configuration -->
+    <security-role-assignment>
+        <role-name>admin</role-name>
+        <principal-name>adminUser</principal-name>
+    </security-role-assignment>
+    
+    <!-- JDBC DataSource configuration -->
+    <reference-descriptor>
+        <resource-description>
+            <res-ref-name>jdbc/EGPDataSource</res-ref-name>
+            <jndi-name>jdbc/EGPDataSource</jndi-name>
+        </resource-description>
+    </reference-descriptor>
+</weblogic-web-app>
+```
